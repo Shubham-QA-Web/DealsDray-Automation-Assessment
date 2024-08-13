@@ -51,8 +51,7 @@ public class ResolutionAndScreenShot {
     @Test(dataProvider = "resolutions")
     public void captureScreenshots(Dimension resolution, String name) throws IOException {
         driver.get("https://www.getcalley.com/page-sitemap.xml");
-      //  driver.manage().window().maximize();
-
+     
         // Links to navigate
         String[] links = {
             "https://www.getcalley.com/",
@@ -81,11 +80,6 @@ public class ResolutionAndScreenShot {
             // Navigate back to the sitemap
             driver.navigate().back();
         }
-
-        // Validate the page title
-      //  String expectedTitle = "https://www.getcalley.com/page-sitemap.xml"; // Replace with the actual expected title
-        //String actualTitle = driver.getTitle();
-        //Assert.assertEquals(actualTitle, expectedTitle, "Page title does not match!");
     }
 
     @AfterClass
